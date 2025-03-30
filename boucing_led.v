@@ -29,9 +29,9 @@ always @(posedge clk_i or negedge rst_n_i) begin
         direction_i <= 1'b0;    // initial direction to left
     else if (enable)begin
 		if (led_o == 10'b0100000000)
-			direction_i <= 1'b1;    //cand ajunge la 10 de 1, se schimba directia in dreapta
+			direction_i <= 1'b1;    //changing direction to right
 		else if (led_o == 10'b0000000010)
-			direction_i <= 1'b0;    //cand ajunge la 10 de 0, se schimba directia in stanga
+			direction_i <= 1'b0;    //changing direction to left
 	end
 end
 
